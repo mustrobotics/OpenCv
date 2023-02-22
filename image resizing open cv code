@@ -1,0 +1,22 @@
+import cv2
+
+try:
+    # Load the image
+    image = cv2.imread("//home/tootsie/Downloads//WhatsApp Image 2023-02-07 at 9.55.23 AM.jpeg")
+
+    # Define the ROI coordinates
+    y = 500
+    x = 500
+    width = 500
+    height = 500
+
+    # Crop the image
+    cropped_image = image[y:y+height, x:x+width]
+
+    # Display the cropped image
+    cv2.imshow("Cropped Image", cropped_image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+except Exception as e:
+    print("Error:", e)
